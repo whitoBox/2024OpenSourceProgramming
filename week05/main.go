@@ -16,7 +16,7 @@ func main() {
 
 	fmt.Println(reflect.TypeOf(f), reflect.TypeOf(g), reflect.TypeOf(i))
 	fmt.Printf("%s\n", strings.Title("inha tech"))
-	fmt.Println(math.Ceil(3.99))
+	fmt.Println(math.Ceil(3.99), math.Floor(3.4))
 
 	fmt.Printf("value i:%d\n", i)
 	fmt.Println("value i:", i)
