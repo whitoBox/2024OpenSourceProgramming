@@ -4,7 +4,7 @@ import ( //헤더파일이랑 비슷한 개념
 	"fmt"
 )
 
-func main() {
+func main1() {
 
 	var f float64
 	var i int
