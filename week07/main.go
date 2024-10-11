@@ -19,10 +19,12 @@ func main() {
 
 	i = strings.TrimSpace(i)                //< .strip in python
 	score, _ := strconv.ParseInt(i, 16, 32) //(문자열 , 진수 , 비트)
+	var aOrNot string
 
 	if score >= 65 {
-		fmt.Printf("score:%d A", score)
+		aOrNot = "A"
 	} else {
-		fmt.Printf("score:%d F", score)
+		aOrNot = "F"
 	}
+	fmt.Printf("score:%d %s", score, aOrNot)
 }
