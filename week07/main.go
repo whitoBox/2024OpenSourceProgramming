@@ -6,7 +6,9 @@ import (
 )
 
 func main() {
+
 	var now time.Time = time.Now()
-	var month int = int(now.Month())
-	fmt.Print(now, month)
+	fmt.Printf("current date: %d.%s.%d\n", now.Year(), now.Month(), now.Day())
+	fmt.Printf("current time: %d:%d.%d\n", now.Hour(), now.Minute(), now.Second())
+	fmt.Print(now.Month())
 }
