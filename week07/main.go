@@ -1,13 +1,16 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"strings"
+	"os"
 )
 
 func main() {
-	words := "s#it #appends"
-	fix := strings.NewReplacer("#", "h")
-	fmt.Print(words + "\n")
-	fmt.Print(fix.Replace(words))
+	userInput := bufio.NewReader(os.Stdin)
+	//i, err := r.ReadString('\n')
+	fmt.Print("write name:")
+	name, err := userInput.ReadString('\n')
+	fmt.Print(name, err)
+
 }
