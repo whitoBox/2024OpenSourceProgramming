@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
 )
 
@@ -11,6 +12,11 @@ func main() {
 	//i, err := r.ReadString('\n')
 	fmt.Print("write name:")
 	name, err := userInput.ReadString('\n')
-	fmt.Print(name, err)
+
+	if err != nil {
+		log.Fatal(err)
+	} else {
+		fmt.Print(name)
+	}
 
 }
