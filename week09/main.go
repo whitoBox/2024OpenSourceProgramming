@@ -13,8 +13,8 @@ import (
 
 func main() {
 	rand.Seed(time.Now().Unix())
-	answer := rand.Intn(5) + 5
-	//`fmt.Printf("%d\n", answer)
+	answer := rand.Intn(5) + 5 //5~9
+	//fmt.Printf("%d\n", answer)
 
 	win := false
 	for guesses := 0; guesses < 3; guesses++ {
