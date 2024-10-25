@@ -16,6 +16,7 @@ func main() {
 	answer := rand.Intn(5) + 5
 	//`fmt.Printf("%d\n", answer)
 
+	win := false
 	for guesses := 0; guesses < 3; guesses++ {
 		fmt.Printf("%d 번의 기회 남음 input number:", 3-guesses)
 
@@ -30,6 +31,8 @@ func main() {
 
 		if answer == guess {
 			fmt.Println("correct")
+			win = true
+			break
 		}
 		if answer > guess {
 			fmt.Println("your num small")
@@ -37,5 +40,10 @@ func main() {
 		if answer < guess {
 			fmt.Println("your num big")
 		}
+	}
+	if win {
+		fmt.Print("이겼습니다")
+	} else {
+		fmt.Print("졌습니다.")
 	}
 }
