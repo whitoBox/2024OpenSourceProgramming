@@ -20,15 +20,17 @@ func main() {
 	i = strings.TrimSpace(i) //< .strip in python
 	num, _ := strconv.Atoi(i)
 
-	count := 0
-	for j := 1; j <= num; j++ {
+	//count := 0
+	isPrime := true //가독성, 저장공간크기 개선 (변수에 'is-'들어가는건 true/false 들어간다.)
+	for j := 2; j < num; j++ {
 		if num%j == 0 {
-			count++
+			//count++
+			isPrime = false
 		}
 	}
-	if count > 2 {
-		fmt.Printf("%d는 소수가 아닙니다.", num)
-	} else {
+	if isPrime {
 		fmt.Printf("%d는 소수입니다.", num)
+	} else {
+		fmt.Printf("%d는 소수아닙입니다.", num)
 	}
 }
