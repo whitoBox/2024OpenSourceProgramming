@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"log"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -25,10 +26,12 @@ func main() {
 	if num < 2 {
 		isPrime = false
 	} else {
-		for j := 2; j < num; j++ {
+		for j := 2; j <= int(math.Sqrt(float64(num))); j++ { //sqrt(float), int랑 비교하기 위해서 int
 			if num%j == 0 {
 				isPrime = false
+				break
 			}
+			fmt.Printf("%d ", j)
 		}
 	}
 
