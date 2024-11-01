@@ -24,8 +24,12 @@ func main() {
 
 	if num < 2 {
 		isPrime = false
+	} else if num == 2 {
+		isPrime = true
+	} else if num%2 == 0 {
+		isPrime = false
 	} else {
-		for j := 2; j*j <= num; j++ { //sqrt(float), int랑 비교하기 위해서 int
+		for j := 3; j*j <= num; j += 2 { //sqrt(float), int랑 비교하기 위해서 int
 			if num%j == 0 {
 				isPrime = false
 				break
