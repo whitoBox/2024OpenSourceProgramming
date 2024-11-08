@@ -30,28 +30,32 @@ func isPrime(num int) bool { //매게변수 / 리턴타임
 	return true
 }
 
-func main() {
-	fmt.Printf("시작 정수 입력: ")
+func getInt() (int, error) {
 	r := bufio.NewReader(os.Stdin)
 	a, err := r.ReadString('\n')
 	if err != nil {
-		log.Fatal(err)
+		//log.Fatal(err)
+		return 0, err
 	}
 
-	a = strings.TrimSpace(a) //< .strip in python
-	n1, err := strconv.Atoi(a)
+	a = strings.TrimSpace(a)    //< .strip in python
+	num, err := strconv.Atoi(a) //<정수로 변환
+	if err != nil {
+		//log.Fatal(err)
+		return 0, err
+	}
+	return num, nil
+}
+
+func main() {
+	fmt.Printf("시작 정수 입력: ")
+	n1, err := getInt()
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	fmt.Printf("끝정수 입력: ")
-	b, err := r.ReadString('\n')
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	b = strings.TrimSpace(b) //< .strip in python
-	n2, err := strconv.Atoi(b)
+	n2, err := getInt()
 	if err != nil {
 		log.Fatal(err)
 	}
