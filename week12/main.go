@@ -4,7 +4,6 @@ import (
 	"fmt"
 
 	"github.com/headfirstgo/keyboard"
-	//go get github.com/headfirstgo/keyboard
 )
 
 func main() {
@@ -12,7 +11,7 @@ func main() {
 
 	for i := 0; i < len(gpa); i++ {
 		fmt.Print("input float num:")
-		gpa[i], _ = keyboard.GetFloat()
+		gpa[i], _ = keyboard.GetFloat() //go get github.com/headfirstgo/keyboard
 	}
 	for index, value := range gpa {
 		fmt.Printf("%d: %f\n", index, value)
