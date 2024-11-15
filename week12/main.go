@@ -26,7 +26,8 @@ func main() {
 	//fmt.Println(dates) // 배열 출력
 	//fmt.Printf("%#v", dates) // 배열 리터럴 출력
 
-	for i := 0; i < len(dates); i++ {
-		fmt.Println(i, dates[i])
+	//for i := 0; i < len(dates); i++ {
+	for i, v := range dates {
+		fmt.Println(i, v)
 	}
 }
