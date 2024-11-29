@@ -3,23 +3,25 @@ package main
 import "fmt"
 
 func main() {
-	ages := make(map[string]int) //맵 자료형 (딕셔너리 같은거)
-	//슬라이싱으로 만들어보기 (리스트 같은거)
-	var name string
-	var age int
-
-	for {
-		fmt.Print("what's your name ('q' to exit):")
-		fmt.Scanln(&name)
-		if name == "q" {
-			break
-		}
-		fmt.Print("what's your age?:")
-		fmt.Scanln(&age)
-
-		ages[name] = age
+	var student1 struct {
+		id   int
+		name string
+		gpa  float32
 	}
-	for name, age := range ages {
-		fmt.Printf("%s %d\n", name, age)
+	student1.id = 202444029
+	student1.name = "John"
+	student1.gpa = 3.98
+
+	fmt.Println(student1)
+
+	var student2 struct {
+		id   int
+		name string
+		gpa  float32
 	}
+	student2.id = 202444030
+	student2.name = "Wick"
+	student2.gpa = 4.1
+	fmt.Println(student2.id)
+
 }
